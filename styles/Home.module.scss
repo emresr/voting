@@ -1,0 +1,56 @@
+$numDays: 5;
+$numHours: 10;
+$timeHeight: 60px;
+
+.home_container {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   color: var(--color1);
+   position: relative;
+}
+.grid {
+   display: grid;
+   grid-template-columns: repeat(10, minmax(0, 1fr));
+}
+.timeline {
+   position: absolute;
+   height: 100%;
+   background: red;
+   width: 5px;
+   margin-top: 5%;
+   z-index: 1;
+   grid-column-start: auto;
+}
+.hour {
+   margin-left: 25px;
+   font-weight: bold;
+   min-height: 10%;
+}
+
+.user {
+   background: rgba(255, 0, 0, 0.3);
+   grid-column: span 10 / span 10;
+   height: 100px;
+   margin-top: 25px;
+   display: flex;
+   position: relative;
+}
+.user_name {
+   position: absolute;
+   top: 0;
+   left: 0;
+   bottom: 0;
+   right: 0;
+   z-index: -1;
+   font-size: 100px;
+   color: rgba(255, 255, 255, 0.2);
+}
+.event {
+   background: rgba(0, 0, 255, 0.4);
+   width: calc(100% * 2 / 10);
+   height: 100%;
+   border-radius: 10px;
+   font-size: 10px;
+   text-align: center;
+}

@@ -1,0 +1,36 @@
+.main {
+   padding: 0px;
+   width: 100%;
+   color: var(--color1);
+}
+
+.header {
+   margin: 0px;
+   display: flex;
+   justify-content: space-between;
+   font-size: 25px;
+   width: 100%;
+   color: var(--color1);
+   padding: 10px;
+   background: var(--color6);
+   margin-bottom: 20px;
+   box-shadow: black;
+}
+.header_title {
+   margin: 0px;
+   @media (max-width: 768px) {
+      margin: 0px 15px 0px 15px;
+   }
+   font-size: 35px;
+   color: var(--color2);
+   text-shadow: 2px 2px 0 var(--color4), 4px 4px 0 var(--color5),
+      6px 6px 0 var(--color6);
+}
+
+/* Links */
+.links {
+   display: flex;
+}
+.link {
+   margin: 0 10px 0 10px;
+}

@@ -1,0 +1,21 @@
+.vote_container {
+   width: 50%;
+   margin: 0 auto 0 auto;
+   text-align: center;
+}
+
+/* Answer */
+.answer {
+   width: 100%;
+   margin: 20px 0 0px 0;
+   padding: 4px 10px;
+   border: 2px solid black;
+   background: var(--color5);
+   &:hover {
+      background: var(--color6);
+   }
+   &:focus {
+      background: var(--color4);
+      color: var(--color6);
+   }
+}

@@ -1,0 +1,58 @@
+generator client {
+  provider = "prisma-client-js"
+}
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+// more answers
+model User {
+  id    Int     @id @default(autoincrement())
+  createdAt DateTime @default(now())
+  email String  @unique
+  name  String?
+  organizations Organization[]
+  voters Voter[]
+}
+model Voter {
+  id Int @id @default(autoincrement())
+  user   User?   @relation(fields: [userId], references: [id])
+userId  Int?
+impactPoint Int @default(0)
+pointsToOthers Int @default(100)
+alreadyVoted Boolean @default(false)
+  voting   Voting?  @relation(fields: [votingId], references: [id])
+votingId  Int?
+}
+model Organization {
+  id        Int      @id @default(autoincrement())
+  name String 
+ users User[]
+ votings Voting[]
+}
+
+model Voting{
+  id Int @id @default(autoincrement())
+    createdAt DateTime @default(now())
+  title String
+  answers Answer[]
+  voters Voter[]
+  organization   Organization?   @relation(fields: [organizationId], references: [id])
+  organizationId  Int?
+}
+
+
+model Answer {
+   id        Int      @id @default(autoincrement())
+   title String
+   description String?
+   point Int @default(0)
+  voting    Voting   @relation(fields: [votingId], references: [id])
+  votingId  Int
+}
+model Coupon {
+  id Int @id @default(autoincrement())
+  createdAt DateTime @default(now())
+  name String
+  current Int @default(1)
+}

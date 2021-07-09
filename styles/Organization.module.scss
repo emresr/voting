@@ -1,0 +1,21 @@
+.org_container {
+   width: 80%;
+   display: flex;
+
+   margin: 0 auto 0 auto;
+}
+.left_container {
+   width: 30%;
+}
+/* Users */
+.users_container {
+   margin-top: 10px;
+}
+/* Votings */
+.votings_container {
+   width: 70%;
+}
+.voting {
+   border: 2px gray solid;
+   padding: 4px;
+}

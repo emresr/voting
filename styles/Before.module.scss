@@ -1,0 +1,32 @@
+.before_container {
+   width: 60%;
+   margin: 0 auto 0 auto;
+}
+.info_container {
+   text-align: center;
+}
+
+.equally {
+   margin: 10px;
+   background: var(--color5);
+   padding: 3px;
+   border: none;
+   font-weight: bold;
+   color: var(--color2);
+}
+/* Answer */
+.voter {
+   margin: 10px 0 0 0;
+   padding: 4px 10px;
+   border: 2px solid black;
+   background: var(--color5);
+   &:hover {
+      background: var(--color6);
+   }
+   &:focus {
+      background: var(--color4);
+      color: var(--color6);
+   }
+   display: flex;
+   justify-content: space-between;
+}
